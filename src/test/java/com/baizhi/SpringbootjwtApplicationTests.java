@@ -34,6 +34,7 @@ class SpringbootjwtApplicationTests {
     //验证令牌
     void test(){
         int a = 0;
+        int b=0;
         JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256("qwe")).build();
         DecodedJWT verify = jwtVerifier.verify("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi6a2P6ZOOIiwiaWQiOjIxLCJleHAiOjE1OTY5NDkxNjV9.tgWbvsaQRvW5QbPFtxaeqGv1DdnUFszRIq6_2-xIWc4");
         System.out.println(verify.getClaim("id").asInt());
